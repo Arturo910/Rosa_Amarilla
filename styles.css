@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor-principal {
+    text-align: center;
+    z-index: 10;
+    transition: opacity 1s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ffeb3b, #ff9800);
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+}
+
+.contenedor-rosa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 5;
+    width: 200px;
+    height: 300px;
+}
+
+.contenedor-rosa.activo {
+    opacity: 1;
+}
+
+.rosa {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+}
+
+.petalo {
+    position: absolute;
+    background: linear-gradient(to bottom, #ffeb3b, #ffd54f);
+    border-radius: 50%;
+    width: 60px;
+    height: 80px;
+    transform-origin: bottom center;
+}
+
+.p1 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(0deg);
+}
+
+.p2 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(60deg);
+}
+
+.p3 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(120deg);
+}
+
+.p4 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(180deg);
+}
+
+.p5 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(240deg);
+}
+
+.p6 {
+    top: 30px;
+    left: 45px;
+    transform: rotate(300deg);
+}
+
+.centro {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, #fffce0, #ffeb3b 60%, #ffc107);
+    border-radius: 50%;
+    top: 55px;
+    left: 55px;
+    z-index: 11;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+}
+
+.tallo {
+    position: absolute;
+    background: linear-gradient(to bottom, #388e3c, #2e7d32);
+    width: 8px;
+    height: 150px;
+    top: 150px;
+    left: 96px;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.hoja {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 0 50% 50% 0;
+    z-index: 5;
+    transform-origin: left center;
+}
+
+.h1 {
+    top: 180px;
+    left: 85px;
+    transform: rotate(-30deg);
+}
+
+.h2 {
+    top: 220px;
+    left: 100px;
+    transform: rotate(40deg);
+}
+
+.hoja::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 50% 0 0 50%;
+    right: 0;
+}
+
+.mensaje-secundario {
+    position: absolute;
+    top: 15%;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease 1.5s;
+    z-index: 10;
+    padding: 0 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.mensaje-secundario.activo {
+    opacity: 1;
+}
+
+.btn-regresar {
+    position: absolute;
+    bottom: 15%;
+    opacity: 0;
+    transition: opacity 1s ease 2s;
+    z-index: 10;
+}
+
+.btn-regresar.activo {
+    opacity: 1;
+}
+
+.firma {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
